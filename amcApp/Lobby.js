@@ -138,27 +138,42 @@ class Lobby extends Component {
             <View style={styles.footernavigation}>
                 <View style={styles.buttonWrap}>
                     <TouchableHighlight onPress={ this.navigate.bind(this, 'Main') } style={styles.buttonbottom}>
-                        <Text>Movies</Text>
+                        <Image
+                          style={styles.footerImage}
+                          source={require('./assets/LobbyOrder.png')}
+                        />
                     </TouchableHighlight>
                 </View>
                 <View style={styles.buttonWrap}>
                     <TouchableHighlight onPress={ this.navigate.bind(this, 'Main') } style={styles.buttonbottom}>
-                        <Text>Rewards</Text>
+                        <Image
+                          style={styles.footerImage}
+                          source={require('./assets/LobbyOrder.png')}
+                        />
                     </TouchableHighlight>
                 </View>
                 <View style={styles.buttonWrap}>
                     <TouchableHighlight onPress={ this.navigate.bind(this, 'Main') } style={styles.buttonbottom}>
-                        <Text>Order Food</Text>
+                        <Image
+                          style={styles.footerImage}
+                          source={require('./assets/LobbyOrder.png')}
+                        />
                     </TouchableHighlight>
                 </View>
                 <View style={styles.buttonWrap}>
                     <TouchableHighlight onPress={ this.navigate.bind(this, 'Main') } style={styles.buttonbottom}>
-                        <Text>Find Theater</Text>
+                        <Image
+                          style={styles.footerImage}
+                          source={require('./assets/LobbyOrder.png')}
+                        />
                     </TouchableHighlight>
                 </View>
                 <View style={styles.buttonWrap}>
                     <TouchableHighlight onPress={ this.navigate.bind(this, 'Main') } style={styles.buttonbottom}>
-                        <Text>Other</Text>
+                        <Image
+                          style={styles.footerImage}
+                          source={require('./assets/LobbyOrder.png')}
+                        />
                     </TouchableHighlight>
                 </View>
             </View>
@@ -275,6 +290,10 @@ const styles = StyleSheet.create({
   contentImage: {
     width: width,
     height: calculatedHeight,
+  },
+  footerImage: {
+    width: width / 5,
+    height: 70,
   },
 });
 
