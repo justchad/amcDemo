@@ -64,7 +64,7 @@ var h4                  = 22;
 var h5                  = 20;
 var h6                  = 18;
 
-class Lobby extends Component {
+class Theater extends Component {
   
   navigate(routeName) {
     this.props.navigator.push({
@@ -82,7 +82,7 @@ class Lobby extends Component {
                     <TouchableHighlight onPress={ this.navigate.bind(this, 'Main') } style={styles.button}>
                         <Image
                           style={styles.amcHeader}
-                          source={require('./images/amchead.png')}
+                          source={require('./images/amcheadD.png')}
                         />
                     </TouchableHighlight>
                 </View>
@@ -95,7 +95,7 @@ class Lobby extends Component {
                     <TouchableHighlight onPress={ this.navigate.bind(this, 'Main') } style={styles.button}>
                         <Image
                           style={styles.regHeader}
-                          source={require('./images/registerhead.png')}
+                          source={require('./images/registerheadD.png')}
                         />
                     </TouchableHighlight>
                 </View>
@@ -105,7 +105,7 @@ class Lobby extends Component {
         <View style={styles.contentwrapper}>
             <Image
               style={styles.contentImage}
-              source={require('./images/combospage.png')}
+              source={require('./images/combospageD.png')}
             />
         </View>
 
@@ -115,7 +115,7 @@ class Lobby extends Component {
                     <TouchableHighlight onPress={ this.navigate.bind(this, 'Main') } style={styles.buttonbottom}>
                         <Image
                           style={styles.footerImage}
-                          source={require('./images/movies.png')}
+                          source={require('./images/moviesD.png')}
                         />
                     </TouchableHighlight>
                 </View>
@@ -123,7 +123,7 @@ class Lobby extends Component {
                     <TouchableHighlight onPress={ this.navigate.bind(this, 'DontGo') } style={styles.buttonbottom}>
                         <Image
                           style={styles.footerImage}
-                          source={require('./images/rewards.png')}
+                          source={require('./images/rewardsD.png')}
                         />
                     </TouchableHighlight>
                 </View>
@@ -131,7 +131,7 @@ class Lobby extends Component {
                     <TouchableHighlight onPress={ this.navigate.bind(this, 'Lobby') } style={styles.buttonbottom}>
                         <Image
                           style={styles.footerImage}
-                          source={require('./images/orderfood.png')}
+                          source={require('./images/orderfoodD.png')}
                         />
                     </TouchableHighlight>
                 </View>
@@ -139,7 +139,7 @@ class Lobby extends Component {
                     <TouchableHighlight onPress={ this.navigate.bind(this, 'Theater') } style={styles.buttonbottom}>
                         <Image
                           style={styles.footerImage}
-                          source={require('./images/findtheater.png')}
+                          source={require('./images/findtheaterD.png')}
                         />
                     </TouchableHighlight>
                 </View>
@@ -147,7 +147,7 @@ class Lobby extends Component {
                     <TouchableHighlight onPress={ this.navigate.bind(this, 'Main') } style={styles.buttonbottom}>
                         <Image
                           style={styles.footerImage}
-                          source={require('./images/other.png')}
+                          source={require('./images/other2.png')}
                         />
                     </TouchableHighlight>
                 </View>
@@ -164,12 +164,12 @@ const styles = StyleSheet.create({
     flex:1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+    backgroundColor: '#222729',
   },
   headerwrapper: {
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#e2383f',
+    backgroundColor: '#222729',
     width: width,
     height: headerHeight,
     borderBottomWidth: 1,
@@ -195,7 +195,7 @@ const styles = StyleSheet.create({
   footerwrapper: {
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: 'white',
+    backgroundColor: '#222729',
     width: width,
     height: footerHeight,
     borderTopWidth: 1,
@@ -238,7 +238,7 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: h4,
-    color: 'white',
+    color: '#e2383f',
   },
   titleWrap: {
     flex: 1,
@@ -263,4 +263,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Lobby
+export default Theater

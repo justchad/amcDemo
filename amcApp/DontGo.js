@@ -64,7 +64,7 @@ var h4                  = 22;
 var h5                  = 20;
 var h6                  = 18;
 
-class Main extends Component {
+class DontGo extends Component {
   
   navigate(routeName) {
     this.props.navigator.push({
@@ -76,10 +76,10 @@ class Main extends Component {
     return (
     <View style={styles.wrapper}>
         
-        <TouchableHighlight onPress={ this.navigate.bind(this, 'Lobby') } style={styles.fullHeight}>
+        <TouchableHighlight onPress={ this.navigate.bind(this, 'Theater') } style={styles.fullHeight}>
             <Image
               style={styles.fullImage}
-              source={require('./images/walkinginpage.png')}
+              source={require('./images/walkingaway.png')}
             />
         </TouchableHighlight>
         
@@ -176,4 +176,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Main
+export default DontGo
