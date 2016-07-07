@@ -1,6 +1,6 @@
 /**
- * AMC Demo - Damascus Edge - The Forge
- * https://github.com/justchad/amcDemo.git
+ * UMB Demo - Damascus Edge - The Forge
+ * https://github.com/justchad/geha_blueberry_demo
  * @flow
  */
 
@@ -22,7 +22,8 @@ import {
 var {height, width}     = Dimensions.get('window');
 var headerHeight        = 85 - 1;
 var footerHeight        = 70 - 1;
-var calculatedHeight    = height - headerHeight - footerHeight;
+var topNavHeight        = 70 - 1;
+var calculatedHeight    = height - headerHeight - footerHeight - topNavHeight;
 var contentHeight       = calculatedHeight;
 var divider             = 50;
 var paddedWidth         = width - 20;
@@ -64,7 +65,7 @@ var h4                  = 22;
 var h5                  = 20;
 var h6                  = 18;
 
-class Main extends Component {
+class Lobby extends Component {
   
   navigate(routeName) {
     this.props.navigator.push({
@@ -80,57 +81,84 @@ class Main extends Component {
             <View style={styles.headernavigation}>
                 <View style={styles.buttonWrap}>
                     <TouchableHighlight onPress={ this.navigate.bind(this, 'Main') } style={styles.button}>
-                        <Text>Home</Text>
+                        <Text>AMC LOGO</Text>
                     </TouchableHighlight>
                 </View>
-                <View style={styles.divider}>
-                    
+                
+                <View style={styles.titleWrap}>
+                    <Text style={styles.title}>Order Food</Text>
                 </View>
+                
                 <View style={styles.buttonWrap}>
                     <TouchableHighlight onPress={ this.navigate.bind(this, 'Main') } style={styles.button}>
-                        <Text>Hom</Text>
+                        <Text>IMAGE</Text>
                     </TouchableHighlight>
                 </View>
-                <View style={styles.divider}>
-                    
+            </View>
+        </View>
+        
+        <View style={styles.topNavWrapper}>
+            <View style={styles.topNavigation}>
+                <View style={styles.buttonWrap}>
+                    <TouchableHighlight onPress={ this.navigate.bind(this, 'Combos') } style={styles.buttonTop}>
+                        <Text>COMBOS</Text>
+                    </TouchableHighlight>
                 </View>
                 <View style={styles.buttonWrap}>
-                    <TouchableHighlight onPress={ this.navigate.bind(this, 'Lobby') } style={styles.button}>
-                        <Text>Lobby</Text>
+                    <TouchableHighlight onPress={ this.navigate.bind(this, 'Popcorn') } style={styles.buttonTop}>
+                        <Text>POPCORN</Text>
+                    </TouchableHighlight>
+                </View>
+                <View style={styles.buttonWrap}>
+                    <TouchableHighlight onPress={ this.navigate.bind(this, 'Drinks') } style={styles.buttonTop}>
+                        <Text>DRINKS</Text>
+                    </TouchableHighlight>
+                </View>
+                <View style={styles.buttonWrap}>
+                    <TouchableHighlight onPress={ this.navigate.bind(this, 'Snacks') } style={styles.buttonTop}>
+                        <Text>SNACKS</Text>
+                    </TouchableHighlight>
+                </View>
+                <View style={styles.buttonWrap}>
+                    <TouchableHighlight onPress={ this.navigate.bind(this, 'Entrees') } style={styles.buttonTop}>
+                        <Text>ENTREES</Text>
                     </TouchableHighlight>
                 </View>
             </View>
         </View>
       
         <View style={styles.contentwrapper}>
-      
-            <TouchableHighlight onPress={ this.navigate.bind(this, 'Main') } style={styles.button}>
-                <Text style={styles.welcome}>Home</Text>
-            </TouchableHighlight>
-        
+            <Image
+              style={styles.contentImage}
+              source={require('./assets/LobbyOrder.png')}
+            />
         </View>
 
         <View style={styles.footerwrapper}>
             <View style={styles.footernavigation}>
                 <View style={styles.buttonWrap}>
                     <TouchableHighlight onPress={ this.navigate.bind(this, 'Main') } style={styles.buttonbottom}>
-                        <Text>Home</Text>
+                        <Text>Movies</Text>
                     </TouchableHighlight>
-                </View>
-                <View style={styles.divider}>
-                    
                 </View>
                 <View style={styles.buttonWrap}>
                     <TouchableHighlight onPress={ this.navigate.bind(this, 'Main') } style={styles.buttonbottom}>
-                        <Text>Home</Text>
+                        <Text>Rewards</Text>
                     </TouchableHighlight>
-                </View>
-                <View style={styles.divider}>
-                    
                 </View>
                 <View style={styles.buttonWrap}>
                     <TouchableHighlight onPress={ this.navigate.bind(this, 'Main') } style={styles.buttonbottom}>
-                        <Text>Home</Text>
+                        <Text>Order Food</Text>
+                    </TouchableHighlight>
+                </View>
+                <View style={styles.buttonWrap}>
+                    <TouchableHighlight onPress={ this.navigate.bind(this, 'Main') } style={styles.buttonbottom}>
+                        <Text>Find Theater</Text>
+                    </TouchableHighlight>
+                </View>
+                <View style={styles.buttonWrap}>
+                    <TouchableHighlight onPress={ this.navigate.bind(this, 'Main') } style={styles.buttonbottom}>
+                        <Text>Other</Text>
                     </TouchableHighlight>
                 </View>
             </View>
@@ -151,18 +179,11 @@ const styles = StyleSheet.create({
   headerwrapper: {
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: baseColor,
+    backgroundColor: '#e2383f',
     width: width,
     height: headerHeight,
     borderBottomWidth: 1,
     borderBottomColor: dividersDark,
-  },
-  divider: {
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: dividersDark,
-    width: 1,
-    height: divider,
   },
   headernavigation: {
     flexDirection: 'row',
@@ -173,20 +194,35 @@ const styles = StyleSheet.create({
     flexWrap: 'wrap',
     paddingTop: 0,
     paddingBottom: 5,
-    marginTop: 25,
+    
     width: width
+  },
+  topNavWrapper: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: gray,
+    width: width,
+    height: footerHeight,
+    borderTopWidth: 1,
+    borderTopColor: dividersDark,
+  },
+  topNavigation: {
+    flexDirection: 'row',
+    alignSelf: 'stretch',
+    justifyContent: 'center',
+    alignItems: 'center',
+    flexWrap: 'wrap',
   },
   contentwrapper: {
     alignSelf: 'stretch',
     backgroundColor: '#FFFFFF',
     height: contentHeight,
-    padding: 10,
-    width: paddedWidth,
+    width: width,
   },
   footerwrapper: {
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: gray,
+    backgroundColor: 'white',
     width: width,
     height: footerHeight,
     borderTopWidth: 1,
@@ -198,6 +234,13 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     flexWrap: 'wrap',
+  },
+  divider: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: dividersDark,
+    width: 1,
+    height: divider,
   },
   buttonWrap: {
     flex: 1,
@@ -220,6 +263,19 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  title: {
+    fontSize: h4,
+    color: 'white',
+  },
+  titleWrap: {
+    width: 150,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  contentImage: {
+    width: width,
+    height: calculatedHeight,
+  },
 });
 
-export default Main
+export default Lobby
