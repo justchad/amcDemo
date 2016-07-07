@@ -1,6 +1,6 @@
 /**
- * UMB Demo - Damascus Edge - The Forge
- * https://github.com/justchad/geha_blueberry_demo
+ * AMC Demo - Damascus Edge - The Forge
+ * https://github.com/justchad/amcDemo.git
  * @flow
  */
 
