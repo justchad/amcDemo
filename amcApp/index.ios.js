@@ -16,6 +16,8 @@ import {
 
 import Main from './Main';
 import Lobby from './Lobby';
+import Theater from './Theater';
+import DontGo from './DontGo';
 
 
 class amcApp extends Component {
@@ -26,6 +28,12 @@ class amcApp extends Component {
     }
     if (route.name == 'Lobby') {
         return <Lobby navigator={navigator} />
+    }
+    if (route.name == 'Theater') {
+        return <Theater navigator={navigator} />
+    }
+    if (route.name == 'DontGo') {
+        return <DontGo navigator={navigator} />
     }
   }
   
