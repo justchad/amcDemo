@@ -15,13 +15,17 @@ import {
 } from 'react-native';
 
 import Main from './Main';
+import Lobby from './Lobby';
 
 
-class umbDemo extends Component {
+class amcApp extends Component {
   
   renderScene(route, navigator){
     if (route.name == 'Main') {
         return <Main navigator={navigator} />
+    }
+    if (route.name == 'Lobby') {
+        return <Lobby navigator={navigator} />
     }
   }
   
@@ -44,4 +48,4 @@ const styles = StyleSheet.create({
   },
 });
 
-AppRegistry.registerComponent('umbDemo', () => umbDemo);
+AppRegistry.registerComponent('amcApp', () => amcApp);
